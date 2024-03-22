@@ -55,6 +55,13 @@
         letter-spacing: 1.5vw;
         transform: scaleY(1.25);
     }
+    .carousel-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .carousel-container > *{
+        padding-block: 15px ;
+    }
     .stroked-and-filled-text {
         letter-spacing: 0.1rem;
         font-weight: 400px;
@@ -74,9 +81,23 @@
     .projects-grid {
         width: 100%;
         display: flex;
-        gap: 30px;
+        gap: 50px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .project {
+        padding: 20px;
+        min-width: 200px;
+        height: 150px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    /* language logo slider style */
+    .language-slider {
+        margin-block: 8%;
     }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
@@ -139,6 +160,7 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     /* css for mobile devices */
