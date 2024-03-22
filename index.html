@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./assets/index.css" />
+        <link rel="stylesheet" href="./assets/indexResponsive.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="logo">SibyAugusty</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#portfolio">skills</a></li>
+                    <li><a href="#portfolio">project</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+                <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+            </nav>
+        </header>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="wrapper">
+                <svg class="svg-name">
+                    <text x="50%" y="50%" dy=".35em" text-anchor="middle">Siby Augusty</text>
+                </svg>
+            </div>
+            <h1>I'm a <span class="stroked-and-filled-text" id="profession"></span></h1>
+            <div class="social-media">
+                <div class="social-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="social-icon">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="social-icon">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class="social-icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h2 class="scroll-reveal">About Me</h2>
+            <p class="scroll-reveal">
+                Hello! I'm Siby Augusty, a self-taught full-stack developer with a flair for creating responsive, user-centric web applications. My journey through the realms of code has empowered me to weave together the front-end design with back-end logic, using tools like JavaScript, React, and Node.js. Driven by curiosity and the joy of problem-solving, I revel in turning complex challenges into beautiful, functional digital solutions. Let's connect and craft the future of the web!
+            </p>
+
+            <div class="button-container">
+                <a href="./assets/Siby_Resume.pdf" class="download-button">
+                    <i class="fas fa-download"></i>
+                    <span class="button-text">Download CV</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2 class="portfolio-title scroll-reveal">My Work</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <h3>Project Title</h3>
+                    <p>Project Description.</p>
+                </div>
+                <div class="project">
+                    <h3>Project Title</h3>
+                    <p>Project Description.</p>
+                </div>
+                <div class="project">
+                    <h3>Project Title</h3>
+                    <p>Project Description.</p>
+                </div>
+                <div class="project">
+                    <h3>Project Title</h3>
+                    <p>Project Description.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="scroll-reveal">Contact</h2>
+            <p class="scroll-reveal">Let's get in touch! You can fill out the form below or reach me at [your email].</p>
+            <form></form>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="./assets/main.js"></script>
+    </body>
+</html>
