@@ -51,8 +51,28 @@ header.shrink {
     font-style: normal;
     transition: all 0.5s ease;
 }
+
+.logo.shrink::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px; /* or the thickness you want for the underline */
+    background-color: currentColor; /* will take the color of the text */
+    transform-origin: center;
+    transition: transform 0.5s ease;
+    position: relative;
+    top: -15px; /* adjust the spacing from the text to the underline */
+    left: 50%;
+    transform: translateX(-40%) ;
+}
 .logo.shrink {
     font-size: 48px;
+    transform: rotate(-10deg); /* adjust rotation and position if needed */
+
+}
+.logo.shrink::after {
+    /* If you want to change the underline style when the logo shrinks */
+    transform: translateX(-40%) rotate(0deg); /* adjust rotation and position if needed */
 }
 nav {
     display: flex;
@@ -175,6 +195,11 @@ nav ul li a {
     height: 40px;
     width: 40px;
 }
+.social-media .social-icon a{
+    text-decoration: none;
+    color: var(--primary-color);
+
+}
 .social-media .social-icon:hover {
     cursor: pointer;
     transform: translateY(-10px);
@@ -213,6 +238,9 @@ nav ul li a {
     width: 200px;
     cursor: pointer;
     transform: translateY(-5px);
+    color: var(--primary-color);
+    background: white;
+    border: 1px solid --primary-color;
 }
 
 .button-container a {
@@ -223,6 +251,9 @@ nav ul li a {
 .button-container i {
     margin-right: 10px;
     font-size: 22x;
+}
+.button-container:hover a,.button-container:hover i{
+    color: var(--primary-color);
 }
 /* language logo slider style */
 .language-slider {
@@ -240,14 +271,18 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
 }
+
+
 .language-icon i {
     font-size: 5rem;
     color: grey;
+    transition: all  .3s ease;
 }
 .language-icon span{
     font-size: 3rem;
     color: grey;
-    text-transform: capitalize;
+    transition: all  .3s ease;
+
 }
 
 /* Portfolio section styles */

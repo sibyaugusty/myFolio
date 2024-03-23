@@ -60,7 +60,7 @@
         flex-direction: column;
     }
     .carousel-container > *{
-        padding-block: 15px ;
+        padding-block: 5px ;
     }
     .stroked-and-filled-text {
         letter-spacing: 0.1rem;
@@ -98,6 +98,10 @@
     /* language logo slider style */
     .language-slider {
         margin-block: 8%;
+    }
+    .language-icon span{
+        font-size: 1.5rem;
+        color: grey;
     }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {

@@ -6,8 +6,10 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2500,
         speed: 2500,
+        pauseOnHover: false,
+        focusOnSelect: true,
         responsive: [
             {
                 breakpoint: 1024,
@@ -29,6 +31,8 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    autoplaySpeed: 100,
+                    speed: 2000,
                 },
             },
         ],
