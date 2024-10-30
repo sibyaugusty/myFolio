@@ -1,110 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-        <link rel="stylesheet" href="./assets/css/slick.css">
-        <link rel="stylesheet" href="./assets/css/style.css" />
-        <link rel="stylesheet" href="./assets/css/responsive.css" />
-    </head>
-    <body>
-        <!-- Header -->
-        <header>
-            <div class="logo">SibyAugusty</div>
-            <nav>
-                <ul>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#portfolio">skills</a></li>
-                    <li><a href="#portfolio">project</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
-                <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
-            </nav>
-        </header>
-        <!-- Hero Section -->
-        <section id="hero">
-            <div class="wrapper">
-                <svg class="svg-name">
-                    <text x="50%" y="50%" dy=".35em" text-anchor="middle">Siby Augusty</text>
-                </svg>
-            </div>
-            <h1 class="carousel-container"><span>I'm a, </span><span class="stroked-and-filled-text" id="profession"></span></h1>
-            <div class="social-media">
-                <div class="social-icon">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-                <div class="social-icon">
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                </div>
-                <!-- <div class="social-icon">
-                    <i class="fa-brands fa-twitter"></i>
-                </div> -->
-                <div class="social-icon">
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Me Section -->
-        <section id="about">
-            <h2 class="scroll-reveal">About Me</h2>
-            <p class="scroll-reveal">
-                Hello! I'm Siby Augusty, a self-taught full-stack developer with a flair for creating responsive, user-centric web applications. My journey through the realms of code has empowered me to weave together the front-end design with back-end logic, using tools like JavaScript, React, and Node.js. Driven by curiosity and the joy of problem-solving, I revel in turning complex challenges into beautiful, functional digital solutions. Let's connect and craft the future of the web!
-            </p>
-
-            <div class="button-container">
-                <a href="./assets/Siby_Resume.pdf" class="download-button">
-                    <i class="fas fa-download"></i>
-                    <span class="button-text">Download CV</span>
-                </a>
-            </div>
-        </section>
-        <!-- Portfolio Section -->
-        <section id="portfolio">
-            <h2 class="portfolio-title scroll-reveal">My Work</h2>
-            <div class="projects-grid">
-                <div class="project">
-                    <h3>Project Title</h3>
-                    <p>Project Description.</p>
-                </div>
-                <div class="project">
-                    <h3>Project Title</h3>
-                    <p>Project Description.</p>
-                </div>
-                <div class="project">
-                    <h3>Project Title</h3>
-                    <p>Project Description.</p>
-                </div>
-                <div class="project">
-                    <h3>Project Title</h3>
-                    <p>Project Description.</p>
-                </div>
-            </div>
-        </section>
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2 class="scroll-reveal">Contact</h2>
-            <p class="scroll-reveal">Let's get in touch! You can fill out the form below or reach me at [your email].</p>
-            <form></form>
-        </section>
-        
-        <div class="language-slider">
-            <div class="language-icon"><i class="fa-brands fa-php"></i></div>
-            <div class="language-icon"><i class="fa-brands fa-html5"></i></div>
-            <div class="language-icon"><i class="fa-brands fa-js"></i></div>
-            <div class="language-icon"><i class="fa-brands fa-css3-alt"></i></div>
-            <div class="language-icon"><i class="fa-brands fa-react"></i></div>
-            <div class="language-icon"><i class="fa-brands fa-node"></i></div>
-            <div class="language-icon"><i class="fa-brands fa-laravel"></i><span>Laravel</span></div>
-            <div class="language-icon"><i class="fa-brands fa-wordpress"></i><span>ordpress</span></div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/slick.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">SibyAugusty</div>
+      <nav>
+        <ul>
+          <li><a href="#about">about</a></li>
+          <li><a href="#portfolio">skills</a></li>
+          <!-- <li><a href="#portfolio">project</a></li> -->
+          <li><a href="#contact">contact</a></li>
+        </ul>
+        <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+      </nav>
+    </header>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="wrapper">
+        <svg class="svg-name">
+          <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+            Siby Augusty
+          </text>
+        </svg>
+      </div>
+      <h1 class="carousel-container">
+        <span class="hidden">I'm a </span
+        ><span class="stroked-and-filled-text" id="profession"></span>
+      </h1>
+      <div class="social-media">
+        <div class="social-icon">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
+        <div class="social-icon">
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div class="social-icon">
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="social-icon">
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </section>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="./assets/js/slick.min.js"></script>
-        <script src="./assets/js/main.js"></script>
-    </body>
+    <section class="about" id="about">
+      <div class="about-wrap-container">
+        <div class="about-image">
+          <img src="./assets/images/20240615_104151.jpg" alt="About Me" />
+        </div>
+        <div class="about-content">
+          <h2>Who Am I ?</h2>
+          <!-- <p>
+            Hello! I'm a passionate Full Stack Developer with over 2 years of
+            hands-on experience, dedicated to bringing your ideas to life. My
+            expertise spans across both front-end and back-end technologies,
+            allowing me to create seamless and dynamic web applications.
+          </p> -->
+
+          <!-- <p>
+            Front-End Skills: I specialize in crafting responsive and visually
+            appealing interfaces using HTML, CSS, and JavaScript/jQuery. With a
+            foundational understanding of React, I'm always eager to enhance
+            user experiences through modern frameworks.
+          </p>
+          <p>
+            Back-End Skills: On the server side, I excel in PHP development and
+            have a budding interest in Node.js. I enjoy tackling complex
+            problems and finding elegant solutions, ensuring that the backend
+            runs smoothly and efficiently.
+          </p>
+          <p>
+            Database Knowledge: I am proficient in MySQL and MongoDB, enabling
+            me to manage and manipulate data effectively, tailoring it to the
+            specific needs of each project.
+          </p>
+          <p>
+            Frameworks: My experience includes working with Laravel and
+            WordPress, allowing me to build robust applications and content
+            management systems that are both scalable and user-friendly.
+          </p> -->
+          <p>
+            Hi, I’m Siby Augusty, a passionate Full Stack Developer with over 2
+            years of experience in creating responsive and visually appealing
+            web applications. I have a strong background in crafting
+            user-friendly interfaces and developing robust back-end systems,
+            ensuring seamless functionality and performance.
+          </p>
+          <p>
+            I specialize in delivering tailored solutions that meet specific
+            project requirements, leveraging my expertise in popular frameworks
+            and databases. My problem-solving skills enable me to tackle complex
+            challenges and enhance user experiences, whether it’s building
+            scalable applications or managing content systems.
+          </p>
+          <p>
+            I thrive in collaborative environments and believe in the power of
+            communication to drive project success. My dedication to continuous
+            learning keeps me up-to-date with industry trends, allowing me to
+            bring innovative ideas to the projects.
+          </p>
+        </div>
+      </div>
+    </section>
+	
+	
+
+    <div class="language-slider">
+      <div class="language-icon"><i class="fa-brands fa-php"></i></div>
+      <div class="language-icon"><i class="fa-brands fa-html5"></i></div>
+      <div class="language-icon"><i class="fa-brands fa-js"></i></div>
+      <div class="language-icon"><i class="fa-brands fa-css3-alt"></i></div>
+      <div class="language-icon"><i class="fa-brands fa-react"></i></div>
+      <div class="language-icon"><i class="fa-brands fa-node"></i></div>
+      <div class="language-icon"><i class="fa-brands fa-laravel"></i></div>
+      <div class="language-icon"><i class="fa-brands fa-wordpress"></i></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
