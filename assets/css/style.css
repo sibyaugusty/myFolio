@@ -105,7 +105,7 @@ nav ul li a {
   height: 80vh;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 10%;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -191,6 +191,7 @@ nav ul li a {
   font-size: 28px;
   padding: 10px;
 }
+
 .social-media .social-icon {
   display: flex;
   justify-content: center;
@@ -233,6 +234,10 @@ nav ul li a {
   min-height: 80%;
   display: flex;
   gap: 5rem;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  overflow-x: hidden;
+
 }
 
 .about-image {

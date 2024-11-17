@@ -50,7 +50,7 @@ $(document).ready(function () {
 
   // Re-evaluate on window resize
   $(window).resize(applyScrollReveal);
-  
+
   //expanding header for responsive devices
   $(".menu-icon").click(function () {
     $("nav ul").toggleClass("active-menu");
@@ -77,21 +77,14 @@ $(document).ready(function () {
     }
   });
 
-  var professions = [
-    "Full-Stack Developer",
-    "Web Developer",
-    "Software Engineer",
-    "Front-End Developer",
-  ];
+  var professions = ["Full-Stack Developer", "Web Developer", "Software Engineer", "Front-End Developer"];
   var currentIndex = 0;
   var currentCharIndex = 0;
   var element = $("#profession");
 
   function typeEffect() {
     if (currentCharIndex < professions[currentIndex].length) {
-      element.text(
-        element.text() + professions[currentIndex][currentCharIndex++]
-      );
+      element.text(element.text() + professions[currentIndex][currentCharIndex++]);
       setTimeout(typeEffect, 100);
     } else {
       setTimeout(deleteEffect, 2000);
@@ -109,4 +102,37 @@ $(document).ready(function () {
   }
 
   typeEffect();
+
+  //   scroll reveal all option sample
+  //   ScrollReveal().reveal(".example", {
+  //     delay: 300, // Waits 300ms before starting
+  //     distance: "100px", // Moves 100px from its origin
+  //     origin: "top", // Starts from the top
+  //     duration: 800, // Completes the animation in 800ms
+  //     easing: "ease-in-out", // Smooth acceleration and deceleration
+  //     reset: true, // Repeats animation when re-entering viewport
+  //     viewFactor: 0.5, // Starts when 50% of element is visible
+  //     scale: 0.85, // Shrinks element to 85% of its size, then grows
+  //   });
+
+  //about section
+  var slideRight = {
+    distance: window.innerWidth < 576 ? "40%" : "100%", // Adjust based on screen size
+    origin: "left",
+    duration: 1000,
+    delay: 500,
+    opacity: 0,
+    easing: "ease-in-out",
+  };
+  var slideLeft = {
+    distance: window.innerWidth < 576 ? "40%" : "100%", // Adjust based on screen size
+    origin: "Right",
+    duration: 1000,
+    delay: 500,
+    opacity: 0,
+    easing: "ease-in-out",
+  };
+
+  ScrollReveal().reveal(".slide-right-reveal", slideRight);
+  ScrollReveal().reveal(".slide-left-reveal", slideLeft);
 });

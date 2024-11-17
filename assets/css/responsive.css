@@ -47,6 +47,7 @@
   #hero {
     width: 100%;
     min-height: 500px;
+    gap: 8%;
     flex-direction: column;
   }
   .svg-name text {
