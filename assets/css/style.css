@@ -99,6 +99,10 @@ nav ul li a {
   display: none;
 }
 
+section {
+  overflow-x: hidden;
+}
+
 /* Hero section styles */
 #hero {
   min-height: 500px;
@@ -237,7 +241,6 @@ nav ul li a {
   margin-top: 2.5rem;
   padding-top: 2.5rem;
   overflow-x: hidden;
-
 }
 
 .about-image {
@@ -263,15 +266,13 @@ nav ul li a {
   gap: 1rem;
   align-items: flex-start;
 }
-.about-content h2{
+.about-content h2 {
   font-size: 2rem;
 }
-.about-content p{
+.about-content p {
   font-size: 1.4rem;
   line-height: 2rem;
 }
-
-
 
 /* language logo slider style */
 .language-slider {
