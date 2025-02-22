@@ -1,7 +1,6 @@
 @media only screen and (max-width: 576px) {
     header {
         height: 120px;
-        background: #ecf0f1;
         padding-inline: 50px;
     }
 
