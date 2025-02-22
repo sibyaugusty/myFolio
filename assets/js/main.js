@@ -139,54 +139,94 @@ $(document).ready(function () {
 	/** technical skill container related animation */
 	
 });
-// Technical Skills Animation
-function animateProgressBars(section) {
-    const progressBars = section.querySelectorAll('.progress');
-    const percentageTexts = section.querySelectorAll('.skill-name span:last-child');
 
-    progressBars.forEach((bar, index) => {
-        bar.style.width = '0%';
-        percentageTexts[index].textContent = '0%';
-    });
+// // Technical Skills Animation
+// function animateProgressBars(section) {
+//     const progressBars = section.querySelectorAll('.progress');
+//     const percentageTexts = section.querySelectorAll('.skill-name span:last-child');
 
-    setTimeout(() => {
-        progressBars.forEach((bar, index) => {
-            const targetValue = bar.dataset.value;
-            bar.style.width = targetValue + '%';
+//     progressBars.forEach((bar, index) => {
+//         bar.style.width = '0%';
+//         percentageTexts[index].textContent = '0%';
+//     });
 
-            let startValue = 0;
-            const duration = 1500;
-            const increment = (targetValue / duration) * 10;
+//     setTimeout(() => {
+//         progressBars.forEach((bar, index) => {
+//             const targetValue = bar.dataset.value;
+//             bar.style.width = targetValue + '%';
+
+//             let startValue = 0;
+//             const duration = 1500;
+//             const increment = (targetValue / duration) * 10;
             
-            const updateNumber = () => {
-                if (startValue < targetValue) {
-                    startValue += increment;
-                    if (startValue > targetValue) startValue = targetValue;
-                    percentageTexts[index].textContent = Math.round(startValue) + '%';
-                    requestAnimationFrame(updateNumber);
-                }
-            };
+//             const updateNumber = () => {
+//                 if (startValue < targetValue) {
+//                     startValue += increment;
+//                     if (startValue > targetValue) startValue = targetValue;
+//                     percentageTexts[index].textContent = Math.round(startValue) + '%';
+//                     requestAnimationFrame(updateNumber);
+//                 }
+//             };
             
-            updateNumber();
-        });
-    }, 50);
-}
+//             updateNumber();
+//         });
+//     }, 50);
+// }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const navItems = document.querySelectorAll('.skills-nav .nav-item');
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize skill sections
+    const navItems = document.querySelectorAll('.nav-item');
     const skillSections = document.querySelectorAll('.skill-section');
 
+    // Tab switching functionality
     navItems.forEach(item => {
         item.addEventListener('click', () => {
+            const targetSection = item.dataset.section;
+            
+            // Update active states
             navItems.forEach(nav => nav.classList.remove('active'));
-            item.classList.add('active');
             skillSections.forEach(section => section.classList.remove('active'));
-            const activeSection = document.getElementById(item.dataset.section);
-            activeSection.classList.add('active');
-            animateProgressBars(activeSection);
+            
+            item.classList.add('active');
+            document.getElementById(targetSection).classList.add('active');
+            
+            // Animate progress bars
+            animateProgressBars(document.getElementById(targetSection));
         });
     });
+
+    // Progress bar animation
+    function animateProgressBars(section) {
+        const progressBars = section.querySelectorAll('.progress');
+        const percentageTexts = section.querySelectorAll('.percentage');
+
+        progressBars.forEach((bar, index) => {
+            const targetValue = bar.dataset.value;
+            bar.style.width = '0%';
+            percentageTexts[index].textContent = '0%';
+
+            setTimeout(() => {
+                bar.style.width = targetValue + '%';
+                
+                let startValue = 0;
+                const duration = 1500;
+                const increment = (targetValue / duration) * 10;
+                
+                const updateNumber = () => {
+                    if (startValue < targetValue) {
+                        startValue += increment;
+                        if (startValue > targetValue) startValue = targetValue;
+                        percentageTexts[index].textContent = Math.round(startValue) + '%';
+                        requestAnimationFrame(updateNumber);
+                    }
+                };
+                
+                updateNumber();
+            }, 100);
+        });
+    }
 
     // Initialize first section
     animateProgressBars(document.querySelector('.skill-section.active'));
 });
+
