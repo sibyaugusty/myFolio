@@ -228,68 +228,86 @@ $(document).ready(function () {
 
 	// Chat Content
 	const contentDatabase = {
+		// Greetings
 		"greetings": {
-			keywords: ["hi", "hello", "hey", "greetings"],
-			response: "Hey there! I'm Siby's assistant. How can I help you today?"
+			keywords: ["hi", "hello", "hey", "greetings", "good morning", "good afternoon", "what's up?", "👋", "yo"],
+			response: "Hello! I'm here to help you connect with Siby Augusty. How can I assist you today? 😊"
 		},
-		"how_are_you": {
-			keywords: ["how are you", "how's it going", "how do you do"],
-			response: "I'm doing great! Thanks for asking. How can I help you?"
+
+		// Personal Background
+		"about_me": {
+			keywords: ["tell me about yourself", "background", "your story", "introduction", "who exactly are you?"],
+			response: "Siby is a passionate Full Stack Developer from Kerala with nearly 3 years of experience crafting web solutions. He specializes in PHP ecosystems and loves turning complex problems into elegant digital solutions!"
 		},
-		"who_are_you": {
-			keywords: ["who are you", "introduce yourself", "what's your name", "Your name"],
-			response: "I'm Siby Augusty, a Full Stack PHP Web Developer from Kerala, India. I specialize in building dynamic and responsive web applications."
+
+		// Technical Expertise
+		"expertise": {
+			keywords: ["what's your specialty?", "best at", "technical skills", "core competencies", "what stacks?"],
+			response: "Siby's toolkit includes<br>• Backend: PHP/Laravel/Yii<br>• Frontend: React/JavaScrip<br>• Databases: MySQL/MongoD<br>• CMS: WordPres<br>He particularly excels in building RESTful APIs and scalable web architectures. 🚀"
 		},
-		"profession": {
-			keywords: ["what do you do", "profession", "occupation", "job"],
-			response: "I'm a Full Stack PHP Web Developer with expertise in building dynamic and responsive web applications."
+
+		// Service Offerings
+		"offerings": {
+			keywords: ["services", "what do you offer?", "can you build", "development services", "help me with"],
+			response: "Siby provides:<br>✅ Custom Web Development<br>✅ API Integration<br>✅ WordPress Solutions<br>✅ Database Optimization<br>✅ Full-Stack Projects"
 		},
-		"experience": {
-			keywords: ["experience", "years", "background", "career"],
-			response: "I have 2.8 years of experience in web development, working with PHP, JavaScript, and modern frameworks like React and Laravel."
+
+		// Project Inquiry
+		"portfolio": {
+			keywords: ["see your work", "portfolio", "past projects", "github", "show me examples"],
+			response: "Great choice! You can explore Siby's work here:<br><br>• Live Projects: https://sibyaugusty.github.io/myFolio<br>• Code Samples: https://github.com/sibyaugusty<br><br>Need specific case studies? Let me know your domain interest!"
 		},
-		"skills": {
-			keywords: ["skills", "technologies", "stack", "tech"],
-			response: "My core skills include PHP, JavaScript, React.js, Laravel, MySQL, and WordPress development."
+
+		// Business Inquiries
+		"pricing": {
+			keywords: ["rates", "pricing", "how much", "cost", "budget"],
+			response: "Siby offers flexible engagement models:<br>• Project-based pricing<br>• Hourly rate<br>• Retainer agreement<br><br>For a detailed quote, could you share<br>1. Project scope<br>2. Timeline<br>3. Specific requirements?"
 		},
-		"services": {
-			keywords: ["services", "offer", "provide", "work"],
-			response: "I offer web development, API development, WordPress customization, and database optimization services."
+
+		// Availability
+		"availability": {
+			keywords: ["are you available?", "timeline", "start date", "when can you begin?", "schedule"],
+			response: "Siby currently has 🟢 availability for new projects starting next week. Would you prefer<br>1. Quick call this wee<br>2. Email briefin<br>3. Send project specs directly<br>Let me check his calendar!"
 		},
-		"database": {
-			keywords: ["database", "data management", "SQL", "MongoDB"],
-			response: "I have experience working with MySQL and MongoDB, optimizing queries, designing schemas, and managing databases efficiently."
+
+		// Consultation
+		"consultation": {
+			keywords: ["talk to Siby", "meeting", "call", "zoom", "consult"],
+			response: "Absolutely! Siby offers free 30-min consultations. Available slots<br>📅 Tue/Thu: 10 AM - 12 PM IS<br>Shall I send you a Calendly link? Or prefer email coordination?"
 		},
-		"projects": {
-			keywords: ["projects", "portfolio", "work examples", "past work"],
-			response: "You can check out my projects on my GitHub: https://github.com/sibyaugusty and my portfolio: https://sibyaugusty.github.io/myFolio"
+
+		// Support
+		"support": {
+			keywords: ["help!", "urgent", "bug fix", "website down", "emergency"],
+			response: "🚨 Let's get this resolved! Please share<br>1. Project nam<br>2. Error detail<br>3. Screenshot (if possible<br>Siby prioritizes support requests and typically responds within 2 hours."
 		},
-		"frameworks": {
-			keywords: ["frameworks", "tools", "development stack"],
-			response: "I work with Laravel, Yii2, WordPress, Bootstrap, and Tailwind CSS for building modern and scalable web applications."
+
+		// Work Process
+		"process": {
+			keywords: ["how you work", "development process", "workflow", "methodology"],
+			response: "Siby follows agile methodology<br>1. Requirement Worksho<br>2. Prototypin<br>3. Sprint Developmen<br>4. QA Testin<br>5. Deploymen<br>Want me to share our complete process document?"
 		},
-		"version_control": {
-			keywords: ["git", "github", "version control", "bitbucket"],
-			response: "I use Git for version control and collaborate using GitHub and Bitbucket for code management."
+
+		// Education
+		"credentials": {
+			keywords: ["education", "certifications", "qualifications", "degrees"],
+			response: "Siby's credentials include<br>• B.Tech in Computer Scienc<br>• Diploma in Computer Engineerin<br>• Certified Laravel Develope<br>• Ongoing AWS Certificatio<br>Need specific certification details?"
 		},
-		"education": {
-			keywords: ["education", "qualification", "degree"],
-			response: "I hold a B.Tech in Computer Science from Universal Engineering College, Thrissur, and a Diploma in Computer Science from K K M Model Polytechnic College."
-		},
-		"location": {
-			keywords: ["where are you from", "location", "city"],
-			response: "I'm based in Thrissur, Kerala, India."
-		},
+		// Contact Information
+		"contact_info": {
+			keywords: ["email", "phone number", "contact details", "how to reach you", "whatsapp", "direct line", "call you"],
+			response: "For official inquiries:<br><br>📧 Email: contact@johnaugusty.com<br>📞 Phone: +91 XXX XXXX XXX (shared upon verified request)<br><br>To protect John's availability for current clients, would you prefer:<br>1. Schedule a call<br>2. Send project details via email<br>3. Receive our contact form link?",
+		  },
+
+		// Closing
 		"goodbye": {
-			keywords: ["bye", "goodbye", "see you", "take care"],
-			response: "Goodbye! Have a great day. Feel free to reach out anytime."
+			keywords: ["bye", "thanks, goodbye", "later", "take care", "end chat"],
+			response: "It was great assisting you! 💻 Remember, Siby is just an email away at contact@sibyaugusty.com. Have a productive day!"
 		},
-		"thanks": {
-			keywords: ["thanks", "thank you", "appreciate"],
-			response: "You're welcome! Let me know if there's anything else I can help with."
-		},
+
+		// Default
 		"default": {
-			response: "I'm here to assist with any questions about my work, skills, and experience. Feel free to ask!"
+			response: "Hmm, I might need Siby's input on that! Could you<br>1. Rephrase your questio<br>2. Email details to contact@sibyaugusty.co<br>3. Request a callback<br>I'm great with tech queries, project details, and scheduling!"
 		}
 	};
 

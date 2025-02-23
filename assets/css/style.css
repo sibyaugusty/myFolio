@@ -614,10 +614,7 @@ section {
     color: #dc3545;
 }
 
-/* chat bot style  */
-/* ===================== */
 /* Chat Bot Styles */
-/* ===================== */
 .chat-icon {
     position: fixed;
     bottom: 20px;
@@ -658,7 +655,7 @@ section {
 
 .chat-container.active {
     width: 350px;
-    height: 500px;
+    height: 600px;
     border-radius: 20px;
     z-index: 1001;
 }
